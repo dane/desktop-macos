@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Install command line tools, but ignore the error output if they are already present
+xcode-select --install 2> /dev/null
+
+# Check if brew is installed and install it if the brew executable is not found
+if [ ! -z /opt/homebrew/bin/brew ]; then
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# Check if ansible is installed and install it if the ansible executables are not found
+if [ ! -z ansible-playbook ]; then
+  brew install ansible
+fi
+
+make
