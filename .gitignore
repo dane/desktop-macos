@@ -1,6 +1,6 @@
 *.swp
 config/zsh/.zcompdump
+config/zsh/.zsh_sessions
 config/chromium
 config/gh
 config/vim/plugged
-
