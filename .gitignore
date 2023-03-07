@@ -1,0 +1,6 @@
+*.swp
+config/zsh/.zcompdump
+config/chromium
+config/gh
+config/vim/plugged
+
