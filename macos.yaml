@@ -1,0 +1,22 @@
+- hosts: localhost
+  gather_facts: true
+  tasks:
+    - name: Fetch wallpapers
+      git:
+        repo: https://github.com/dane/wallpapers
+        dest: ~/Projects/src/github.com/dane/wallpapers
+        update: yes
+    - name: "Set wallpaper"
+      command: osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/{{ ansible_user_id }}/Projects/src/github.com/dane/wallpapers/landscape-1.jpg"'
+    - name: "Clear dock"
+      command: dockutil --remove all
+    - name: "Configure dock"
+      command: dockutil --add {{ item }}
+      loop:
+        - /Applications/Things3.app
+        - /Applications/Alacritty.app
+        - /Applications/Slack.app
+        - /System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app
+        - /Applications/Discord.app
+        - /Applications/Spotify.app
+

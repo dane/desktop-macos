@@ -1,0 +1,15 @@
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Create config dir symlink
+      file:
+        src: '{{ playbook_dir }}/config'
+        dest: '~/.config'
+        state: link
+        force: true
+    - name: Create vimrc symlink
+      file:
+        src: "~/.config/vim"
+        dest: "~/.vim"
+        state: link
+        force: true

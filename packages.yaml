@@ -1,0 +1,23 @@
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Install Homebrew packages
+      command: brew reinstall {{ item }}
+      loop:
+        - git
+        - alacritty
+        - ruby
+        - go
+        - tmux
+        - gh
+        - vim
+        - docker
+        - docker-credential-helper
+        - docker-buildx
+    - name: Install Homebrew casks
+      command: brew reinstall --cask {{ item }}
+      loop:
+        - 1password
+        - discord
+        - spotify
+        - gpg-suite-no-mail

@@ -1,0 +1,11 @@
+- hosts: localhost
+  gather_facts: true
+  tasks:
+    - name: Create .zshenv
+      copy:
+        dest: "~/.zshenv"
+        force: true
+        content: |
+          export ZDOTDIR=~/.config/zsh
+    - name: Set ZSH as default shell
+      command: "chsh -s /bin/zsh {{ ansible_user_id }}"
