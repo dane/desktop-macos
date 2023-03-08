@@ -14,6 +14,7 @@
         - docker
         - docker-credential-helper
         - docker-buildx
+        - terraform
     - name: Install Homebrew casks
       command: brew reinstall --cask {{ item }}
       loop:
