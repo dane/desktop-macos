@@ -17,3 +17,6 @@ macos:
 
 github:
 	@ansible-playbook github.yaml
+
+github-enterprise:
+	@ansible-playbook github-enterprise.yaml
