@@ -15,6 +15,7 @@
         - docker-credential-helper
         - docker-buildx
         - terraform
+        - jq
     - name: Install Homebrew casks
       command: brew reinstall --cask {{ item }}
       loop:
