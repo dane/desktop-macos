@@ -5,6 +5,7 @@
       command: brew reinstall {{ item }}
       loop:
         - git
+        - python3
         - alacritty
         - ruby
         - go
