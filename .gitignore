@@ -4,3 +4,4 @@ config/zsh/.zsh_sessions
 config/chromium
 config/gh
 config/vim/plugged
+config/vim/.netrwhist
