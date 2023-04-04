@@ -20,6 +20,7 @@
         - nomad
         - jq
         - tree
+        - goreleaser
     - name: Install Homebrew casks
       command: brew reinstall --cask {{ item }}
       loop:
