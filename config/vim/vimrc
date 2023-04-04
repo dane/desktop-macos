@@ -2,7 +2,8 @@
 call plug#begin()
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'rust-lang/rust.vim'
-  Plug 'hashivim/vim-terraform'
+  "Plug 'hashivim/vim-terraform'
+  Plug 'fatih/vim-hclfmt'
   Plug 'dane/minimal-light.vim', { 'as': 'minimal-light' }
 call plug#end()
 
@@ -15,7 +16,11 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 let g:go_imports_autosave = 0
-let g:terraform_fmt_on_save = 1
+"let g:terraform_fmt_on_save = 1
+
+let g:hcl_fmt_autosave = 1
+let g:tf_fmt_autosave = 1
+let g:nomad_fmt_autosave = 1
 
 set encoding=utf-8
 set foldmethod=indent
