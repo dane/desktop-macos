@@ -21,6 +21,7 @@
         - jq
         - tree
         - goreleaser
+        - sshpass
     - name: Install Homebrew casks
       command: brew reinstall --cask {{ item }}
       loop:
