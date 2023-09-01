@@ -1,0 +1,52 @@
+# Set XDG env-vars for any applications that respect it.
+export XDG_CONFIG_HOME=~/.config
+export XDG_CONFIG_DIRS=~/.config:$XDG_CONFIG_DIRS
+
+# Bash history settings.
+export HISTFILE=~/.bash_history
+export HISTSIZE=100000
+export HISTFILESIZE=100000
+
+## Append history from all terminal windows.
+HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
+# Ruby bundler settings.
+export BUNDLE_USER_HOME=~/.config/bundle
+export BUNDLE_USER_CACHE=~/.local/bundle/cache
+export BUNDLE_USER_PLUGIN=~/.local/bundle/plugin
+
+# Go settings.
+export GO111MODULE=on
+export GOPATH=~/Projects
+
+# Build PATH.
+export PATH=$GOPATH/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+
+# Build CDPATH.
+export CDPATH=$CDPATH:$GOPATH/src
+
+# Misc settings.
+export EDITOR=vim
+export KEYTIMEOUT=1
+export GPG_TTY=$(tty)
+export PS1="\W\\$ "
+
+# Load machine specific bashrc.
+if [ -f ~/.local/bash/bashrc ]; then
+  source ~/.local/bash/bashrc
+fi
+
+# Launch a new or attach to an existing tmux session.
+if [ -z "$TMUX" ]; then
+  tmux attach 2> /dev/null
+  if [ $? -eq 1 ]; then
+    tmux
+  fi
+fi
