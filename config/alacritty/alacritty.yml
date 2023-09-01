@@ -1,21 +1,21 @@
 colors:
   primary:
-    background: '0xEEEEEE'
-    foreground: '0x555555'
+    background: '0x1E1E1E'
+    foreground: '0xEEEEEE'
 
   # Normal colors
   normal:
-    black:   '0x555555'
+    black:   '0x666666'
     red:     '0xAA6666'
     green:   '0x66AA66'
     yellow:  '0xbfb054'
     blue:    '0x6666AA'
     magenta: '0x9B449B'
     cyan:    '0x54b0bf'
-    white:   '0xCCCCCC'
+    white:   '0xffffff'
 
   bright:
-    black:   '0x555555'
+    black:   '0x666666'
     red:     '0x66EEEE'
     green:   '0xAA66AA'
     yellow:  '0xbfb054'
@@ -33,6 +33,42 @@ colors:
     magenta: '0x9B449B'
     cyan:    '0x54b0bf'
     white:   '0xFFFFFF'
+#
+#  Light theme
+#  primary:
+#    background: '0xEEEEEE'
+#    foreground: '0x555555'
+#
+#  # Normal colors
+#  normal:
+#    black:   '0x555555'
+#    red:     '0xAA6666'
+#    green:   '0x66AA66'
+#    yellow:  '0xbfb054'
+#    blue:    '0x6666AA'
+#    magenta: '0x9B449B'
+#    cyan:    '0x54b0bf'
+#    white:   '0xCCCCCC'
+#
+#  bright:
+#    black:   '0x555555'
+#    red:     '0x66EEEE'
+#    green:   '0xAA66AA'
+#    yellow:  '0xbfb054'
+#    blue:    '0xAAAA66'
+#    magenta: '0x9B449B'
+#    cyan:    '0x54b0bf'
+#    white:   '0xFFFFFF'
+#
+#  dim:
+#    black:   '0x666666'
+#    red:     '0x66EEEE'
+#    green:   '0xEE66EE'
+#    yellow:  '0x666666'
+#    blue:    '0xEEEE66'
+#    magenta: '0x9B449B'
+#    cyan:    '0x54b0bf'
+#    white:   '0xFFFFFF'
 
   indexed_colors: []
 
