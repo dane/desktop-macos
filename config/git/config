@@ -1,6 +1,7 @@
 [core]
 	editor = vim
 	whitespace = trailing-space,space-before-tab
+	excludesfile = ~/.local/git/gitignore
 
 [apply]
 	whitespace = fix
